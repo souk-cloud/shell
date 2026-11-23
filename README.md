@@ -17,7 +17,7 @@ make test                             # 자동 테스트 (GNU 명령과 비교 9
 | 1 | `exit` 로 종료 | `exit [n]`, Ctrl-D(EOF) 도 종료 |
 | 2 | `&` 백그라운드 | `cmd &`, `jobs`, `fg [%n]`, `bg [%n]`, 종료 시 `Done` 알림 |
 | 3 | 인터럽트 키 | Ctrl-C(SIGINT), Ctrl-Z(SIGTSTP), Ctrl-\(SIGQUIT) — 쉘은 살아있고 포그라운드 작업만 영향 |
-| 4 | 재지향/파이프 | `<`  `>`  `>>`  `|` (여러 단 파이프, 재지향과 조합 가능) |
+| 4 | 재지향/파이프 | `<`  `>`  `>>`  `\|` (여러 단 파이프, 재지향과 조합 가능) |
 | 5 | 내장 명령 11개 | `ls pwd cd mkdir rmdir ln cp rm mv cat grep` (직접 구현) |
 | + | 부가 기능 | 따옴표/이스케이프, `*` `?` 와일드카드, 외부 명령 실행(`sleep`, `vi` …), `echo`, `help` |
 
@@ -45,7 +45,7 @@ make test                             # 자동 테스트 (GNU 명령과 비교 9
 
 ## GitHub 협업 방법
 ```bash
-git clone https://github.com/<계정>/<저장소>.git && cd <저장소>
+git clone https://github.com/souk-cloud/shell.git && cd shell
 git checkout -b feature/<이름>-<기능>        # 예: feature/kim-ls
 git add src/cmd_ls.c && git commit -m "feat(ls): -l, -R 옵션 구현"
 git push -u origin feature/<이름>-<기능>     # GitHub 에서 Pull Request → 팀원 리뷰 → main 병합
