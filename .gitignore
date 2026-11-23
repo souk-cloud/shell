@@ -1,0 +1,9 @@
+# 빌드 산출물
+obj/
+myshell
+*.o
+# 편집기/OS
+*.swp
+.vscode/
+.DS_Store
+core
